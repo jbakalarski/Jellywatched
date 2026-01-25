@@ -48,7 +48,7 @@ git clone https://github.com/jbakalarski/Jellywatched.git
 ```bash
 python -m pip install -r requirements.txt
 ```
-4) Fill `.env` according to [.env instructions](#-.env-instructions)
+4) Fill `.env` according to [.env instructions](#-env-instructions)
 5) Run main.py:
 ```bash
 # Compare watched items for all users
@@ -73,7 +73,7 @@ python main.py --users alice bob
 * 🔐 Uses Jellyfin API key (no login required)
 
 ## ❓ Purpose
-Jellywatched helps you discover what everyone has already watched on your Jellyfin server — perfect for choosing something to remove to free some space
+Jellywatched helps you discover what everyone has already watched on your Jellyfin server — perfect for choosing something to remove to free some space.
 
 ## 💲 Support
 <p><a href="https://support.jedrzej.me/" target="_blank"> <img align="left" src="https://raw.githubusercontent.com/jbakalarski/jbakalarski/main/assets/supportme.png" width="172" height="56" alt="jbakalarski" /></a></p>
