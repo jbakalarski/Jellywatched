@@ -12,8 +12,8 @@ from colorama import Fore, Style
 load_dotenv()
 JELLYFIN_URL = os.getenv("JELLYFIN_URL")
 API_KEY = os.getenv("API_KEY")
-MEDIA_PATH = os.getenv("MEDIA_PATH", "")
-PATHS_FILE = os.getenv("PATHS_FILE", "paths.txt")
+MEDIA_PATH = os.getenv("MEDIA_PATH") or ""
+PATHS_FILE = os.getenv("PATHS_FILE") or "paths.txt"
 
 HEADERS = {
     "X-Emby-Token": API_KEY
