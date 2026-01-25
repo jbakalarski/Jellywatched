@@ -65,7 +65,7 @@ python main.py --users alice bob --paths
 ## 🧩 Arguments
 * `-u, --users` – specify one or more usernames to compare watched items
 * `-a, --all` – compare watched items for all users
-* `-p, --paths` – generate a `paths.txt` file containing the media paths
+* `-p, --paths` – generate a file containing the media paths
 
 ## 🛠️ .env instructions
 * `JELLYFIN_URL` – the URL of your Jellyfin server
