@@ -48,7 +48,7 @@ git clone https://github.com/jbakalarski/Jellywatched.git
 ```bash
 python -m pip install -r requirements.txt
 ```
-4) Fill `.env` according to [.env instructions](#-env-instructions)
+4) Fill `.env` according to [.env instructions](#%EF%B8%8F-env-instructions)
 5) Run main.py:
 ```bash
 # Compare watched items for all users
