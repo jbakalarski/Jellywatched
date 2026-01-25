@@ -56,12 +56,22 @@ python main.py --all
 
 # Compare watched items for specific users
 python main.py --users alice bob
+
+# Also generate paths.txt file
+python main.py --users alice bob --paths
 ```
 6) It works!
 
+## 🧩 Arguments
+* `-u, --users` – specify one or more usernames to compare watched items
+* `-a, --all` – compare watched items for all users
+* `-p, --paths` – generate a `paths.txt` file containing the media paths
+
 ## 🛠️ .env instructions
-* `JELLYFIN_URL` – URL of your Jellyfin server
-* `API_KEY` – API key generated in dashboard/keys
+* `JELLYFIN_URL` – the URL of your Jellyfin server
+* `API_KEY` – an API key generated in Jellyfin's dashboard under **API Keys**
+* `MEDIA_PATH` – the path to the folder containing your Jellyfin libraries (e.g. `/home/ubuntu/jellyfin/media`)
+* `PATHS_FILE` – the name of the paths file (e.g. `paths.txt`)
 
 ## 🚀 Features
 * 🎬 Compare watched movies and episodes between multiple users
