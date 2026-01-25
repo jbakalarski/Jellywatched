@@ -116,6 +116,10 @@ def watched_by_users(usernames):
     return result
 
 # --- Execution ---
+paths_file = PATHS_FILE
+if os.path.exists(paths_file) and args.paths:
+    os.remove(paths_file)
+
 if not (args.users or args.all or args.paths):
     parser.print_help()
     exit(0)
@@ -135,8 +139,5 @@ for i in common_watched:
     else:
         print(f"""{Style.BRIGHT}{Fore.GREEN}{i["name"]}{Style.RESET_ALL}""")
     if args.paths:
-        paths_file = PATHS_FILE
-        if os.path.exists(paths_file):
-            os.remove(paths_file)
         with open(paths_file, "a", encoding="utf-8") as f:
             f.write(f"{MEDIA_PATH}{i['path']}\n")
