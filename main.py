@@ -23,7 +23,7 @@ HEADERS = {
 parser = argparse.ArgumentParser(description="Jellywatched - Jellyfin Watched Items Tool")
 parser.add_argument("-u", "--users", nargs="+", help="List of usernames to compare watched items")
 parser.add_argument("-a", "--all", action="store_true", help="Compare watched items for all users")
-parser.add_argument("-p", "--paths", action="store_true", help="Output paths to paths.txt file")
+parser.add_argument("-p", "--paths", action="store_true", help="Output paths to file")
 args = parser.parse_args()
 
 # --- Jellyfin API Functions ---
@@ -130,14 +130,30 @@ if args.all:
 if args.users:
     common_watched = watched_by_users(args.users)
 
+common_watched.sort(key=lambda x: x["name"].lower() if x["name"] else "")
+
 if common_watched == []:
     print(Style.BRIGHT + Fore.YELLOW + "None of the specified users have any watched items in common." + Style.RESET_ALL)
 
+movies_print = False
+series_print = False
+others_print = False
 for i in common_watched:
     if i["type"] == "Episode":
+        if not series_print:
+            print(Style.BRIGHT + Fore.YELLOW + "Series:" + Style.RESET_ALL)
+            series_print = True
         print(f"""{Style.BRIGHT}{Fore.MAGENTA}{i["series_name"]}{Style.RESET_ALL} - {Fore.CYAN}S{i["season"]:02d}E{i["episode"]:02d}{Style.RESET_ALL}""")
-    else:
+    elif i["type"] == "Movie":
+        if not movies_print:
+            print(Style.BRIGHT + Fore.YELLOW + "\nMovies:" + Style.RESET_ALL)
+            movies_print = True
         print(f"""{Style.BRIGHT}{Fore.GREEN}{i["name"]}{Style.RESET_ALL}""")
+    else:
+        if not others_print:
+            print(Style.BRIGHT + Fore.YELLOW + "\nOthers:" + Style.RESET_ALL)
+            others_print = True
+        print(f"""{Style.BRIGHT}{Fore.RED}{i["name"]}{Style.RESET_ALL} - Type: {i["type"]}""")
     if args.paths:
         with open(paths_file, "a", encoding="utf-8") as f:
             f.write(f"{MEDIA_PATH}{i['path']}\n")
