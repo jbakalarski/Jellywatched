@@ -1,0 +1,62 @@
+<svg height="452" width="659.2" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(32,16)">
+<filter filterUnits="userSpaceOnUse" height="460" id="shadow" width="667.2" x="-32" y="-24">
+<feGaussianBlur stdDeviation="12"/>
+</filter>
+<rect fill="#000000c0" filter="url(#shadow)" height="388" rx="10" ry="10" width="595.2" x="4" y="12"/>
+<rect fill="#282c34" height="388" rx="10" ry="10" width="595.2"/>
+<clipPath id="header">
+<rect height="28" width="595.2"/>
+</clipPath>
+<rect clip-path="url(#header)" fill="#383837" height="56" rx="10" ry="10" width="595.2"/>
+<line stroke="#000000c0" stroke-width="0.5" x1="0" x2="595.2" y1="28" y2="28"/><text dominant-baseline="central" fill="#b3b3b3" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="297.6" y="14">python main.py --help</text>
+<g>
+<circle cx="14" cy="14" fill="#ff5f56" r="6" stroke="#ff5f56" stroke-width="0.5"/>
+<circle cx="34" cy="14" fill="#ffbd2e" r="6" stroke="#ffbd2e" stroke-width="0.5"/>
+<circle cx="54" cy="14" fill="#28c941" r="6" stroke="#28c941" stroke-width="0.5"/>
+</g>
+<svg class="terminal" font-family="JetBrains Mono, Fira Code, Source Code Pro, Cascadia Code, Consolas, Menlo, Monaco, DejaVu Sans Mono, monospace, Symbols Nerd Font Mono" font-size="12" height="360" width="595.2" y="28">
+<svg fill="#dcdfe4" x="9.6" y="7.2">
+<g>
+<svg height="345.6" viewBox="0 0 48 28.8" width="576">
+<g stroke-width="0.025"/>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="0">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">usage: </tspan><tspan fill="#dcdfe4">main.py </tspan><tspan fill="#dcdfe4">[-h] </tspan><tspan fill="#dcdfe4">[-u </tspan><tspan fill="#dcdfe4">USERS </tspan><tspan fill="#dcdfe4">[USERS </tspan><tspan fill="#dcdfe4">...]] </tspan><tspan fill="#dcdfe4">[-a] </tspan><tspan fill="#dcdfe4">[-p] </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="28.8">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">Jellywatched </tspan><tspan fill="#dcdfe4">- </tspan><tspan fill="#dcdfe4">Jellyfin </tspan><tspan fill="#dcdfe4">Watched </tspan><tspan fill="#dcdfe4">Items </tspan><tspan fill="#dcdfe4">Tool </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="57.6">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">options: </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="72">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">-h, </tspan><tspan fill="#dcdfe4">--help </tspan><tspan fill="#dcdfe4" x="14.4em">show </tspan><tspan fill="#dcdfe4">this </tspan><tspan fill="#dcdfe4">help </tspan><tspan fill="#dcdfe4">message </tspan><tspan fill="#dcdfe4">and </tspan><tspan fill="#dcdfe4">exit </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="86.4">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">-u, </tspan><tspan fill="#dcdfe4">--users </tspan><tspan fill="#dcdfe4">USERS </tspan><tspan fill="#dcdfe4">[USERS </tspan><tspan fill="#dcdfe4">...] </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="100.8">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="14.4em">List </tspan><tspan fill="#dcdfe4">of </tspan><tspan fill="#dcdfe4">usernames </tspan><tspan fill="#dcdfe4">to </tspan><tspan fill="#dcdfe4">compare </tspan><tspan fill="#dcdfe4">watched </tspan><tspan fill="#dcdfe4">items </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="115.2">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">-a, </tspan><tspan fill="#dcdfe4">--all </tspan><tspan fill="#dcdfe4" x="14.4em">Compare </tspan><tspan fill="#dcdfe4">watched </tspan><tspan fill="#dcdfe4">items </tspan><tspan fill="#dcdfe4">for </tspan><tspan fill="#dcdfe4">all </tspan><tspan fill="#dcdfe4">users </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="129.6">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">-p, </tspan><tspan fill="#dcdfe4">--paths </tspan><tspan fill="#dcdfe4" x="14.4em">Output </tspan><tspan fill="#dcdfe4">paths </tspan><tspan fill="#dcdfe4">to </tspan><tspan fill="#dcdfe4">file </tspan></text>
+</svg>
+</g>
+</svg>
+</svg>
+<rect fill="none" height="388" rx="10" ry="10" stroke="#000000" stroke-width="0.5" width="595.2"/>
+<rect fill="none" height="386" rx="9" ry="9" stroke="#f0f0f080" stroke-width="0.5" width="593.2" x="1" y="1"/>
+</g>
+<style>
+@font-face {
+	font-family: JetBrains Mono;
+	font-weight: 100 800;
+	font-style: normal;
+	src: url(https://raw.githubusercontent.com/pamburus/fonts/refs/heads/main/JetBrainsMono/fonts/variable/JetBrainsMono%5Bwght%5D.woff2) format('woff2');
+}
+</style>
+</svg>

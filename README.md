@@ -66,6 +66,7 @@ python main.py --users alice bob --paths
 * `-u, --users` – specify one or more usernames to compare watched items
 * `-a, --all` – compare watched items for all users
 * `-p, --paths` – generate a file containing the media paths
+![](assets/cli/help.svg)
 
 ## 🛠️ .env instructions
 * `JELLYFIN_URL` – the URL of your Jellyfin server
@@ -81,6 +82,9 @@ python main.py --users alice bob --paths
 * ⚡ Fast, simple, no database required
 * 🖥️ Clean, colored CLI output
 * 🔐 Uses Jellyfin API key (no login required)
+
+## 🖥️ Screenshot
+![](assets/cli/all.svg)
 
 ## ❓ Purpose
 Jellywatched helps you discover what everyone has already watched on your Jellyfin server — perfect for choosing something to remove to free some space.
