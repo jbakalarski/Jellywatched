@@ -130,7 +130,17 @@ if args.all:
 if args.users:
     common_watched = watched_by_users(args.users)
 
-common_watched.sort(key=lambda x: x["name"].lower() if x["name"] else "")
+common_watched.sort(
+    key=lambda x: (
+        0 if x["type"] == "Episode" else
+        1 if x["type"] == "Movie" else
+        2,
+        x.get("series_name") or "",
+        x.get("season") or 0,
+        x.get("episode") or 0,
+        x.get("name") or ""
+    )
+)
 
 if common_watched == []:
     print(Style.BRIGHT + Fore.YELLOW + "None of the specified users have any watched items in common." + Style.RESET_ALL)
