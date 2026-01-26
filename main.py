@@ -135,25 +135,27 @@ common_watched.sort(key=lambda x: x["name"].lower() if x["name"] else "")
 if common_watched == []:
     print(Style.BRIGHT + Fore.YELLOW + "None of the specified users have any watched items in common." + Style.RESET_ALL)
 
-movies_print = False
-series_print = False
-others_print = False
-for i in common_watched:
-    if i["type"] == "Episode":
-        if not series_print:
-            print(Style.BRIGHT + Fore.YELLOW + "Series:" + Style.RESET_ALL)
-            series_print = True
-        print(f"""{Style.BRIGHT}{Fore.MAGENTA}{i["series_name"]}{Style.RESET_ALL} - {Fore.CYAN}S{i["season"]:02d}E{i["episode"]:02d}{Style.RESET_ALL}""")
-    elif i["type"] == "Movie":
-        if not movies_print:
-            print(Style.BRIGHT + Fore.YELLOW + "\nMovies:" + Style.RESET_ALL)
-            movies_print = True
-        print(f"""{Style.BRIGHT}{Fore.GREEN}{i["name"]}{Style.RESET_ALL}""")
-    else:
-        if not others_print:
-            print(Style.BRIGHT + Fore.YELLOW + "\nOthers:" + Style.RESET_ALL)
-            others_print = True
-        print(f"""{Style.BRIGHT}{Fore.RED}{i["name"]}{Style.RESET_ALL} - Type: {i["type"]}""")
-    if args.paths:
-        with open(paths_file, "a", encoding="utf-8") as f:
-            f.write(f"{MEDIA_PATH}{i['path']}\n")
+if common_watched:
+    print(f"{Style.BRIGHT}{Fore.YELLOW}Common watched items:{Style.RESET_ALL}\n")
+    movies_print = False
+    series_print = False
+    others_print = False
+    for i in common_watched:
+        if i["type"] == "Episode":
+            if not series_print:
+                print(f"{Style.BRIGHT}{Fore.RED}Series:{Style.RESET_ALL}")
+                series_print = True
+            print(f"""{Style.BRIGHT}{Fore.MAGENTA}{i["series_name"]}{Style.RESET_ALL} - {Fore.CYAN}S{i["season"]:02d}E{i["episode"]:02d}{Style.RESET_ALL}""")
+        elif i["type"] == "Movie":
+            if not movies_print:
+                print(f"{Style.BRIGHT}{Fore.RED}\nMovies:{Style.RESET_ALL}")
+                movies_print = True
+            print(f"""{Style.BRIGHT}{Fore.GREEN}{i["name"]}{Style.RESET_ALL}""")
+        else:
+            if not others_print:
+                print(f"{Style.BRIGHT}{Fore.RED}\nOthers:{Style.RESET_ALL}")
+                others_print = True
+            print(f"""{Style.BRIGHT}{Fore.RED}{i["name"]}{Style.RESET_ALL} - Type: {i["type"]}""")
+        if args.paths:
+            with open(paths_file, "a", encoding="utf-8") as f:
+                f.write(f"{MEDIA_PATH}{i['path']}\n")
