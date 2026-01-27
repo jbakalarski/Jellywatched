@@ -68,7 +68,7 @@ python main.py --users alice bob --paths
 * `-p, --paths` – generate a file containing the media paths
 ![](assets/cli/help.svg)
 
-## 🛠️ .env instructions
+## 🛠️ Environment variables
 * `JELLYFIN_URL` – the URL of your Jellyfin server
 * `API_KEY` – an API key generated in Jellyfin's dashboard under **API Keys**
 * `MEDIA_PATH` – the path to the folder containing your Jellyfin libraries (e.g. `/home/ubuntu/jellyfin/media`)
