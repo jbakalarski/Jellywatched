@@ -155,17 +155,17 @@ if common_watched:
             if not series_print:
                 print(f"{Style.BRIGHT}{Fore.RED}Series:{Style.RESET_ALL}")
                 series_print = True
-            print(f"""{Style.BRIGHT}{Fore.MAGENTA}{i["series_name"]}{Style.RESET_ALL} - {Fore.CYAN}S{i["season"]:02d}E{i["episode"]:02d}{Style.RESET_ALL}""")
+            print(f"""{Style.BRIGHT}{Fore.MAGENTA}{str(i["series_name"])}{Style.RESET_ALL} - {Fore.CYAN}S{int(i["season"] or 0):02d}E{int(i["episode"] or 0):02d}{Style.RESET_ALL}""")
         elif i["type"] == "Movie":
             if not movies_print:
                 print(f"{Style.BRIGHT}{Fore.RED}\nMovies:{Style.RESET_ALL}")
                 movies_print = True
-            print(f"""{Style.BRIGHT}{Fore.GREEN}{i["name"]}{Style.RESET_ALL}""")
+            print(f"""{Style.BRIGHT}{Fore.GREEN}{str(i["name"])}{Style.RESET_ALL}""")
         else:
             if not others_print:
                 print(f"{Style.BRIGHT}{Fore.RED}\nOthers:{Style.RESET_ALL}")
                 others_print = True
-            print(f"""{Style.BRIGHT}{Fore.RED}{i["name"]}{Style.RESET_ALL} - Type: {i["type"]}""")
+            print(f"""{Style.BRIGHT}{Fore.RED}{str(i["name"])}{Style.RESET_ALL} - Type: {i["type"]}""")
         if args.paths:
             with open(paths_file, "a", encoding="utf-8") as f:
                 f.write(f"{MEDIA_PATH}{i['path']}\n")
