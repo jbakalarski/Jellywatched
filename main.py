@@ -16,7 +16,7 @@ MEDIA_PATH = os.getenv("MEDIA_PATH") or ""
 PATHS_FILE = os.getenv("PATHS_FILE") or "paths.txt"
 
 HEADERS = {
-    "X-Emby-Token": API_KEY
+    "Authorization": f"MediaBrowser Token={API_KEY}"
 }
 
 # --- Argument Parsing ---
