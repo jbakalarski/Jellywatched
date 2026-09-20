@@ -158,12 +158,14 @@ if common_watched:
             print(f"""{Style.BRIGHT}{Fore.MAGENTA}{i["series_name"]}{Style.RESET_ALL} - {Fore.CYAN}S{i["season"]:02d}E{i["episode"]:02d}{Style.RESET_ALL}""")
         elif i["type"] == "Movie":
             if not movies_print:
-                print(f"{Style.BRIGHT}{Fore.RED}\nMovies:{Style.RESET_ALL}")
+                separator = "\n" if series_print else ""
+                print(f"{Style.BRIGHT}{Fore.RED}{separator}Movies:{Style.RESET_ALL}")
                 movies_print = True
             print(f"""{Style.BRIGHT}{Fore.GREEN}{i["name"]}{Style.RESET_ALL}""")
         else:
             if not others_print:
-                print(f"{Style.BRIGHT}{Fore.RED}\nOthers:{Style.RESET_ALL}")
+                separator = "\n" if series_print or movies_print else ""
+                print(f"{Style.BRIGHT}{Fore.RED}{separator}Others:{Style.RESET_ALL}")
                 others_print = True
             print(f"""{Style.BRIGHT}{Fore.RED}{i["name"]}{Style.RESET_ALL} - Type: {i["type"]}""")
         if args.paths:
